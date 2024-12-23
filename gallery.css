@@ -1,0 +1,88 @@
+#gallery-body {
+  background-color: #333;
+  font-family: 'Lacquer', system-ui;
+}
+
+#gallery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* *............................ */
+.grid {
+  display: grid;
+  align-content: center;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+
+  min-height: 110vh;
+  padding: 1rem;
+
+  @media screen and (max-width: 650px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    & img {
+      flex: 1 1 40vw;
+    }
+  }
+}
+
+.image {
+  transition: transform 0.3s ease-in-out;
+}
+
+.image.large {
+  transform: scale(1.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  height: 80vh;
+  width: auto;
+}
+
+:root {
+  --index: 0;
+}
+
+.grid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.loader-placeholder {
+  grid-column: span 4;
+  text-align: center;
+  /* justify-content: center; */
+  background-color: #333;
+  color: #fff;
+  height: 50px;
+}
+
+.fade-in-animate {
+  animation-name: fade-in;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}

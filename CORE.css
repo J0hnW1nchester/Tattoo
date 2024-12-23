@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
+
+*,
+*:before,
+*:after {
+  /* + prevents padding from affecting height and width */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  /* cursor: context-menu; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* + HIDES THE SCROLLBAR BUT LEAVES THE ABILITY TO SCROLL*/
+body::-webkit-scrollbar {
+  display: none;
+  overflow-x: clip;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
