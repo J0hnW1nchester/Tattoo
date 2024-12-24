@@ -50,6 +50,11 @@
   z-index: 1000;
   height: 80vh;
   width: auto;
+
+  @media screen and (max-width: 469px) {
+    height: auto;
+    width: 90vw;
+  }
 }
 
 :root {

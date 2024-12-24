@@ -8,6 +8,7 @@
 }
 
 .separating-line2 {
+  display: none;
   background: #fff;
   height: 2px;
   width: 40vw;
@@ -16,8 +17,8 @@
 }
 
 /* !.....................CORE CODE.................... */
-/* !..................HOME SECTION............ */
 @media only screen and (min-width: 0px) {
+  /* !..................HOME SECTION............ */
   #home-container {
     width: 100vw;
     height: 100vh;
@@ -25,7 +26,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* position: relative; */
     font-family: 'Lacquer', system-ui;
 
     #home-video {
@@ -59,15 +59,11 @@
     z-index: 999;
 
     .nav-container {
-      /* width: 100%; */
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 20px 0px;
       transition: all 0.3s ease-in-out;
-
-      /* @media screen and (max-width: 650px) {
-        padding: 5px 0px; */
     }
 
     ul {
@@ -76,11 +72,6 @@
       justify-content: center;
       list-style-type: none;
       text-align: center;
-      /* width: 100%; */
-
-      /* @media screen and (max-width: 650px) {
-          padding: 5px 0px;
-        } */
     }
 
     a {
@@ -89,10 +80,6 @@
       padding: 7px 15px;
       transition: all 0.3s ease-in-out;
       font-size: clamp(1rem, 1.1vw, 2rem);
-
-      /* @media screen and (max-width: 650px) {
-          font-size: 15px;
-        } */
     }
   }
 
@@ -113,10 +100,6 @@
 
     .nav-container {
       padding: 15px 0px;
-
-      /* @media screen and (max-width: 650px) {
-        padding: 1px 0px;
-      } */
     }
   }
   /* ?............................................. */
@@ -140,11 +123,7 @@
   #about-container {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* width: 100vw; */
     height: 100vh;
-    /* background-color: #212121; */
     background-color: #333;
     position: relative;
 
@@ -160,11 +139,9 @@
       width: 100vw;
       height: auto;
       margin-bottom: 20px;
-      /* border: 1px solid #fff; */
 
       h1 {
         margin: 0;
-        /* font-size: clamp(2rem, 3vw, 5rem); */
         font-size: clamp(3rem, 5vw, 5rem);
 
         padding: 5px 0;
@@ -177,14 +154,13 @@
       }
     }
 
-    /* * ....................GALLERY SLIDER.................. */
+    /* * ....................GALLERY SLIDER START.................. */
     #gallery-body {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh; /* 100vh */
-      background-color: #212121;
-      /* position: absolute; */
+      height: 100vh;
+      background-color: #222;
 
       .slider-gallery-container {
         margin-top: 10px;
@@ -200,28 +176,19 @@
         height: 350px;
         width: 350px;
 
-        /* color: #fff; */
         user-select: none;
-        /* padding: 35px; */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         border-radius: 8px;
-        /* backdrop-filter: blur(30px); */
-        /* background: rgba(255, 255, 255, 0.2); */
-        /* border: 1px solid rgba(255, 255, 255, 0.2); */
       }
 
       .card-list .card-item .user-image {
         height: 350px;
         width: 330px;
         object-fit: cover;
-
-        /* border-radius: 50%; */
-        /* margin-bottom: 40px; */
-        /* border: 3px solid#fff; */
-        /* padding: 4px; */
+        border: none;
       }
 
       .slider-wrapper .swiper-pagination-bullet {
@@ -288,10 +255,15 @@
       padding: 5px;
     }
 
+    .contact-info-class a {
+      text-align: center;
+      font-size: clamp(1.3rem, 4vw, 2.5rem);
+      padding: 5px;
+      color: #fff;
+      display: block;
+    }
+
     .social {
-      /* position: absolute; */
-      /* z-index: 10; */
-      /* bottom: 20px; */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -338,8 +310,8 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 40px;
-    background-color: #212121;
+    height: 50px;
+    background-color: #222;
   }
 }
 
@@ -400,17 +372,14 @@
     margin-left: auto;
     margin-right: auto;
     width: 20vw;
-
-    /* display: none; */
   }
 
   .separating-line2 {
     grid-area: separating-line2;
+    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 20vw;
-
-    /* display: none; */
   }
 
   .social {
@@ -453,9 +422,6 @@
 @media only screen and (min-width: 2500px) {
   .social {
     li {
-      padding: 0 10px;
-      margin-bottom: -20px;
-
       img {
         height: 70px;
         width: auto;
